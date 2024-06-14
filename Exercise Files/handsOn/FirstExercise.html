@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Canvas Example</title>
+    <!-- TODO: Define the canvas style here -->
+    <style type="text/css">
+      #canvas1 {
+        border: dotted 2px grey;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css" />
+    <script>
+      window.addEventListener("load", function () {
+        var theCanvas = document.getElementById("canvas1");
+        if (theCanvas && theCanvas.getContext) {
+          // TODO: change the width and height of the canvas
+          theCanvas.width = 150;
+          theCanvas.height = 150;
+          // TODO: fill the canvas with a light blue background
+          var ctx = theCanvas.getContext("2d");
+          if (ctx) {
+            ctx.fillStyle = "lightBlue";
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 5;
+            ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            ctx.strokeRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1>First Canvas Example</h1>
+    <div id="content">
+      <p>This document contains our first canvas example</p>
+      <!-- TODO: canvas goes here -->
+      <canvas id="canvas1" width="400" height="300">
+        Your browser does not support canvas.
+      </canvas>
+    </div>
+  </body>
+</html>
